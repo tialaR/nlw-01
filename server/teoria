@@ -1,0 +1,47 @@
+* Express => Microframeork para trabalhar com rotas (ajuda a lhe dar com as rotas)
+instalação: npm i express.
+
+* package-lock => É um arquivo gerado pelo npm (arquivo de cache onde não será
+necessário mexer).
+
+* node_modules => Armazena o código das dependências instaladas.
+
+* Para utilizar o typescript o mesmo deve ser instalado através do comando:
+npm i typescript -D
+- toda vez que um projeto usar o typescript será necessário ter um arquivo de 
+configuração do typescript que define quais features do typescript queremos ou 
+não queremos utilizar. Esse aquivo pode ser criado com o comando: npx tsc--init
+
+* Para que o node entenda o códico em typescript é necessário instalar um pacote:
+npm i ts-node -D
+* Para rodar a aplicação rodar o comando: npx ts-node src/server.ts
+
+* Request => serve para obter dados da requisição que está acontecendo na aplicação.
+* Response => serve para devolver uma resposta para qualquer aplicação que esteja 
+consumindo a rota.
+
+* ts-node-dev => Faz a mesma coisa que o ts-node porém ele fica observando alterações no código
+da aplicação. A cada mudança ele roda a aplicação de novo de forma automática.
+para instalar devemos rodar o comando: npm i ts-node-dev -D 
+e realizar a seguinte alteração no package.json: 
+"scripts": {
+    "dev": "ts-node-dev src/server.ts"
+  },
+  => Com isso para rodar a aplicação podemos rodar o comando: 
+  npm run dev
+
+* Rotas => É o endereço completo da requisição
+* Recurso => Qual entidade estamos acessando do sistema
+
+* Request Param => Parâmetros que vem na propria rota e que identificam um recurso.
+ex: buscar/atualizar um único usuário
+* Query Params => Parâmetros que vem na propria rota geralmente opcionais.
+ex: utilizado para filtros, paginações, etc...
+* Request Body => São parametros para criação e atualização de informações.
+ex: nome, senha, email do usuário
+
+* Knex (Query Builder) => Permite trabalhar com bancos de dados relacionais com uma linguagem 
+unificada para todos (MySQL, SQLite, etc...). Ele possibilita a escrita de todas as querys
+em formato JavaScript.
+Com o knex é possivel mudar o banco de dados utilizado na aplicação sem alterar nenhuma
+linha de código, pois a query utilizada é a mesma para todos.
